@@ -31,24 +31,16 @@ namespace ClassMetotDemo
             customer4.Ballance = 4597;
 
             Customer[] customers = {customer1, customer2, customer3, customer4};
-
-            foreach (var customer in customers)
-            {
-                Console.WriteLine("Merhaba " + customer.FirstName+" "+customer.LastName);
-                Console.WriteLine("Mevcut bakiye : " + customer.Ballance);
-                Console.WriteLine(customer.City);
-                Console.WriteLine("-----------------------------------------");
-
-            }
-
             CustomerManager customerManager = new CustomerManager();
 
+            Console.WriteLine("-----------------Müşteri Ekleme-----------------");
             customerManager.AddCustomer();
-            Console.WriteLine("---------------------------------");
+            Console.WriteLine("-----------------Müşteri Silme----------------");
             customerManager.RemoveCustomer(customer2);
-            Console.WriteLine("---------------------------------");
+            Console.WriteLine("-----------------Müşteri Güncelleme----------------");
             customerManager.UpdateCustomer(customer4);
-            
+            Console.WriteLine("-----------------Müşteri Listesi-3 döggü çeşidi ilede yazıldı---------------");
+            customerManager.ListCustomer(customers);
 
 
 
