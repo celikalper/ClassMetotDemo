@@ -9,43 +9,41 @@ namespace ClassMetotDemo
         public void AddCustomer()
         {
             Console.WriteLine("Müşteri eklendi.");
+            Console.WriteLine(" ");
         }
         public void RemoveCustomer(Customer customer)
         {
             Console.WriteLine(customer.FirstName + " " + customer.LastName + " Müşterisi silindi.");
+            Console.WriteLine(" ");
         }
         public void UpdateCustomer(Customer customer)
         {
             Console.WriteLine(customer.FirstName + " " + customer.LastName + " Müşterisinin bilgileri güncellendi.");
+            Console.WriteLine(" ");
         }
 
-        public void ListCustomer(Customer[] customers)
+        public void ListCustomers(Customer[] customers)
         {
-            Console.WriteLine("---------for döngüsü---------");
+            Console.WriteLine("---------For Döngüsü Müşteri Listesi---------");
+            Console.WriteLine(" ");
             for (int i = 0; i < customers.Length; i++)
             {
-                Console.WriteLine("Merhaba " + customers[i].FirstName + " " + customers[i].LastName);
-                Console.WriteLine("Mevcut bakiye : " + customers[i].Ballance);
-                Console.WriteLine(customers[i].City);
-                Console.WriteLine("-----------------------------------------");
+                Console.WriteLine(customers[i].FirstName + " " + customers[i].LastName);
             }
-            Console.WriteLine("---------foreach döngüsü---------");
+            Console.WriteLine(" ");
+            Console.WriteLine("---------Foreach Döngüsü Müşteri Listesi---------");
+            Console.WriteLine(" ");
             foreach (var customer in customers)
             {
-                
-                Console.WriteLine("Merhaba " + customer.FirstName + " " + customer.LastName);
-                Console.WriteLine("Mevcut bakiye : " + customer.Ballance);
-                Console.WriteLine(customer.City);
-                Console.WriteLine("-----------------------------------------");
+                Console.WriteLine(customer.FirstName + " " + customer.LastName);
             }
-            Console.WriteLine("---------while döngüsü---------");
+            Console.WriteLine(" ");
+            Console.WriteLine("---------While Döngüsü Müşteri Listesi---------");
+            Console.WriteLine(" ");
             int j = 0;
             while (j<customers.Length)
             {
-                Console.WriteLine("Merhaba " + customers[j].FirstName + " " + customers[j].LastName);
-                Console.WriteLine("Mevcut bakiye : " + customers[j].Ballance);
-                Console.WriteLine(customers[j].City);
-                Console.WriteLine("-----------------------------------------");
+                Console.WriteLine(customers[j].FirstName + " " + customers[j].LastName);
                 j++;
             }
         }

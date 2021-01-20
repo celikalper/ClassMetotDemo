@@ -34,13 +34,17 @@ namespace ClassMetotDemo
             CustomerManager customerManager = new CustomerManager();
 
             Console.WriteLine("-----------------Müşteri Ekleme-----------------");
+            Console.WriteLine(" ");
             customerManager.AddCustomer();
             Console.WriteLine("-----------------Müşteri Silme----------------");
+            Console.WriteLine(" ");
             customerManager.RemoveCustomer(customer2);
             Console.WriteLine("-----------------Müşteri Güncelleme----------------");
+            Console.WriteLine(" ");
             customerManager.UpdateCustomer(customer4);
             Console.WriteLine("-----------------Müşteri Listesi-3 döggü çeşidi ilede yazıldı---------------");
-            customerManager.ListCustomer(customers);
+            Console.WriteLine(" ");
+            customerManager.ListCustomers(customers);
 
 
 
